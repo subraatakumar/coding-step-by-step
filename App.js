@@ -6,6 +6,7 @@ import { MarkdownReader } from "./src/components";
 export default function App() {
   return (
     <View style={styles.container}>
+      <Welcome />
       <MarkdownReader
         username="subrataindia"
         repo="dsa-javascript"

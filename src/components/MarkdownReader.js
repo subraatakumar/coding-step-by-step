@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Text, ScrollView, View, StyleSheet } from "react-native";
 import axios from "axios";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-native-marked";
 
 const MarkdownReader = ({ username, repo, branch, file }) => {
   const [readme, setReadme] = useState(``);
@@ -23,9 +23,14 @@ const MarkdownReader = ({ username, repo, branch, file }) => {
   }, [username, repo]);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <ReactMarkdown>{readme}</ReactMarkdown>
-    </ScrollView>
+    // <ScrollView contentContainerStyle={styles.container}>
+    <ReactMarkdown
+      value={readme}
+      flatListProps={{
+        initialNumToRender: 8,
+      }}
+    />
+    // </ScrollView>
   );
 };
 

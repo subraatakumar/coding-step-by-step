@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@bounceapp/lottie": "^0.2.1",
     "@dotlottie/react-player": "^1.6.5",
     "@expo/vector-icons": "^13.0.0",
     "@expo/webpack-config": "^19.0.0",
@@ -17,9 +18,10 @@
     "expo": "~49.0.15",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
-    "lottie-react-native": "^5.1.6",
+    "lottie-react-native": "^6.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^9.0.1",
     "react-native": "0.72.6",
     "react-native-marked": "^6.0.4",
     "react-native-svg": "^14.0.0",

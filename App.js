@@ -7,12 +7,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Welcome />
-      <MarkdownReader
+      {/* <MarkdownReader
         username="subrataindia"
         repo="dsa-javascript"
         branch="main"
         file="subratsir/dsa/diff-linear-binary-search.md"
-      />
+      /> */}
     </View>
   );
 }

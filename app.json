@@ -15,10 +15,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "in.ttrc.codingstepbystep"
     },
     "android": {
-      "package":"in.ttrc.codingstepbystep",
+      "package": "in.ttrc.codingstepbystep",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"

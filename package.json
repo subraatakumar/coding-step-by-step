@@ -16,6 +16,7 @@
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "axios": "^1.6.2",
     "expo": "~49.0.15",
+    "expo-modules-autolinking": "^1.5.1",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "lottie-react-native": "^6.4.1",

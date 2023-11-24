@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/codingstepbystep/static/js/main.6cb72933.js",
+    "static/js/490.29d05a13.chunk.js": "/codingstepbystep/static/js/490.29d05a13.chunk.js",
+    "static/js/272.b884e671.chunk.js": "/codingstepbystep/static/js/272.b884e671.chunk.js",
+    "static/js/860.41fad61a.chunk.js": "/codingstepbystep/static/js/860.41fad61a.chunk.js",
+    "static/js/161.60e95206.chunk.js": "/codingstepbystep/static/js/161.60e95206.chunk.js",
+    "static/js/534.29dab712.chunk.js": "/codingstepbystep/static/js/534.29dab712.chunk.js",
+    "static/js/719.26fdb1a7.chunk.js": "/codingstepbystep/static/js/719.26fdb1a7.chunk.js",
+    "static/js/691.9461310c.chunk.js": "/codingstepbystep/static/js/691.9461310c.chunk.js",
+    "static/js/130.7b76edfa.chunk.js": "/codingstepbystep/static/js/130.7b76edfa.chunk.js",
+    "static/js/150.34c3d14c.chunk.js": "/codingstepbystep/static/js/150.34c3d14c.chunk.js",
+    "static/js/94.bfa17b2c.chunk.js": "/codingstepbystep/static/js/94.bfa17b2c.chunk.js",
+    "static/js/686.c87f0676.chunk.js": "/codingstepbystep/static/js/686.c87f0676.chunk.js",
+    "static/js/877.0eb0a015.js": "/codingstepbystep/static/js/877.0eb0a015.js",
+    "favicon.ico": "/codingstepbystep/favicon.ico",
+    "index.html": "/codingstepbystep/index.html",
+    "favicon-32.png": "/codingstepbystep/favicon-32.png",
+    "favicon-16.png": "/codingstepbystep/favicon-16.png",
+    "manifest.json": "/codingstepbystep/manifest.json",
+    "serve.json": "/codingstepbystep/serve.json",
+    "main.6cb72933.js.map": "/codingstepbystep/static/js/main.6cb72933.js.map",
+    "94.bfa17b2c.chunk.js.map": "/codingstepbystep/static/js/94.bfa17b2c.chunk.js.map",
+    "686.c87f0676.chunk.js.map": "/codingstepbystep/static/js/686.c87f0676.chunk.js.map",
+    "877.0eb0a015.js.map": "/codingstepbystep/static/js/877.0eb0a015.js.map"
+  },
+  "entrypoints": [
+    "static/js/877.0eb0a015.js",
+    "static/js/main.6cb72933.js"
+  ]
+}

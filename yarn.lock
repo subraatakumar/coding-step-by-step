@@ -7578,13 +7578,6 @@ qs@6.11.0:
   dependencies:
     side-channel "^1.0.4"
 
-qs@^6.5.1:
-  version "6.11.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.2.tgz#64bea51f12c1f5da1bc01496f48ffcff7c69d7d9"
-  integrity sha512-tDNIz22aBzCDxLtVH++VnTfzxlfeK5CbqohpSqpJgj1Wg/cQbStNAz3NuqCs5vV+pjBsK4x4pN9HlVh7rcYRiA==
-  dependencies:
-    side-channel "^1.0.4"
-
 querystringify@^2.1.1:
   version "2.2.0"
   resolved "https://registry.npmjs.org/querystringify/-/querystringify-2.2.0.tgz"
@@ -7734,13 +7727,6 @@ react-native-table-component@1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/react-native-table-component/-/react-native-table-component-1.2.2.tgz"
   integrity sha512-7bbsi5431iWcjj3toASh8lFHGi6AG/+MTd4M7GuksXKxx/CFs/Qwv1Ys7D2wgyuYKe3hxWNfSVrteFj0tOYXYw==
-
-react-native-web-webview@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-web-webview/-/react-native-web-webview-1.0.2.tgz#c215efa70c17589f2c8d640b1f1dc669b18c6e02"
-  integrity sha512-oNAYNuqUqeqTuAAdIejzDqvUtYA+k5lrvhUYmASdUznZNmyIaoQFA6OKoA4K9F3wdMvark42vUXkUWIp875ewg==
-  dependencies:
-    qs "^6.5.1"
 
 react-native-web@~0.19.6:
   version "0.19.9"

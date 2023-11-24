@@ -2,20 +2,19 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { Welcome } from "./src/screens";
 import { MarkdownReader } from "./src/components";
-import YoutubeIframe from "react-native-youtube-iframe";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <Welcome /> */}
-      <View style={{ alignItems: "center", flex: 1 }}>
+      <Welcome />
+      {/* <View style={{ alignItems: "center", flex: 1 }}>
         <YoutubeIframe
           height={300}
           width={300}
           play={true}
           videoId={"iee2TATGMyI"}
         />
-      </View>
+      </View> */}
 
       {/* <MarkdownReader
         username="subrataindia"

@@ -28,7 +28,6 @@
     "react-native-marked": "^6.0.4",
     "react-native-svg": "^14.0.0",
     "react-native-web": "~0.19.6",
-    "react-native-web-webview": "^1.0.2",
     "react-native-webview": "^13.6.3",
     "react-native-youtube-iframe": "^2.3.0"
   },

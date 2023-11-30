@@ -1,3 +1,4 @@
 import Welcome from "./Welcome.screen";
+import Home from "./Home.screen";
 
-export { Welcome };
+export { Welcome, Home };

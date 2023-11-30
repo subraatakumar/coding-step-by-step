@@ -3,8 +3,12 @@ import { View, Text, StyleSheet, Platform } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import LottieView from "lottie-react-native";
 import { LottieView as LottieViewWeb } from "@bounceapp/lottie";
+import MyButton from "../components/MyButton";
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
+  const navigateToHome = () => {
+    navigation.replace("Home");
+  };
   return (
     <View style={styles.container}>
       {Platform.OS === "web" ? (
@@ -25,6 +29,7 @@ const Welcome = () => {
       <Text>Welcome To CodingStepByStep</Text>
       <Text>Keep Learning Keep Growing</Text>
       {/* <Entypo name="rocket" size={30} /> */}
+      <MyButton title="Start Learning" onPress={navigateToHome} />
     </View>
   );
 };

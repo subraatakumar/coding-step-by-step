@@ -1,3 +1,5 @@
 import MarkdownReader from "./MarkdownReader";
+import Image from "./Image";
+import Tiles from "./Tiles";
 
-export { MarkdownReader };
+export { MarkdownReader, Image, Tiles };

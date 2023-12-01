@@ -1,16 +1,14 @@
-import { View, Text, Image } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import Svg, { Image as SvgImage } from "react-native-svg";
+import Svg, { Image as SvgImage, SvgUri } from "react-native-svg";
+import Image from "./Image";
 
 const Tiles = () => {
   return (
     <View>
       <TouchableOpacity>
-        <Image
-          source={{ uri: "https://reactnative.dev/img/header_logo.svg" }}
-          style={{ width: 150, height: 150, resizeMode: "contain" }}
-        />
+        <Image uri="https://reactnative.dev/img/header_logo.svg" />
         {/* <Svg
           width="200"
           height="100"

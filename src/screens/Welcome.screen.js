@@ -9,9 +9,7 @@ const Welcome = () => {
   const navigation = useNavigation();
 
   const navigateToHome = useCallback(() => {
-    Platform.OS === "web"
-      ? navigation.navigate("Home")
-      : navigation.replace("Home");
+    navigation.replace("Home");
   }, [navigation]);
 
   useEffect(() => {

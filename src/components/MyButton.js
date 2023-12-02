@@ -7,7 +7,7 @@ const MyButton = ({ title, onPress = null, style }) => {
       <Text
         style={{
           ...styles.btnText,
-          color: style.color || styles.btnText.color,
+          color: style?.color || styles.btnText.color,
         }}
       >
         {title}

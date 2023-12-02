@@ -10,17 +10,11 @@ import {
 } from "react-native";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
+import EditGithubPage from "./EditGithubPage";
 
 const MarkdownReader = ({ username, repo, branch, file }) => {
   const [readme, setReadme] = useState(``);
-  //console.log("Web react markdown");
-
-  const handleClick = useCallback(() => {
-    const url = `https://github.com/${username}/${repo}/blob/${branch}/${file}`;
-    if (Linking.canOpenURL(url)) {
-      Linking.openURL(url);
-    }
-  }, []);
+  const url = `https://github.com/${username}/${repo}/blob/${branch}/${file}`;
 
   useEffect(() => {
     const fetchReadme = async () => {
@@ -40,9 +34,7 @@ const MarkdownReader = ({ username, repo, branch, file }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ReactMarkdown>{readme}</ReactMarkdown>
-      <Pressable onPress={handleClick}>
-        <Text>Edit This Page</Text>
-      </Pressable>
+      <EditGithubPage url={url} />
     </ScrollView>
   );
 };
@@ -52,5 +44,6 @@ export default MarkdownReader;
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
+    padding: 10,
   },
 });

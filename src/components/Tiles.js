@@ -38,9 +38,11 @@ const Tiles = ({ handlePress }) => {
     getCoursesList();
   }, []);
 
-  DeviceInfo.isLandscape().then((isLandscape) => {
-    setIsLandscape(isLandscape);
-    setKey(`key-${noOfColumns}`);
+  useEffect(() => {
+    DeviceInfo.isLandscape().then((isLandscape) => {
+      setIsLandscape(isLandscape);
+      setKey(`key-${noOfColumns}`);
+    });
   });
 
   return (
@@ -65,12 +67,9 @@ export default Tiles;
 const Tile = ({ data, style, singleTileWidth = 150 }) => {
   const handlePress = useContext(TilesContext);
 
-  console.log("handlePress in tile");
-  console.log(handlePress);
-
   return (
     <Pressable
-      onPress={() => handlePress(data.id)}
+      onPress={() => handlePress(data.id, data.title)}
       style={{
         width: singleTileWidth,
         borderColor: "grey",

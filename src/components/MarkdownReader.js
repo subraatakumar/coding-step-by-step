@@ -24,12 +24,14 @@ const MarkdownReader = ({ username, repo, branch, file }) => {
 
   return (
     // <ScrollView contentContainerStyle={styles.container}>
-    <ReactMarkdown
-      value={readme}
-      flatListProps={{
-        initialNumToRender: 8,
-      }}
-    />
+    <>
+      <ReactMarkdown
+        value={readme}
+        flatListProps={{
+          initialNumToRender: 8,
+        }}
+      />
+    </>
     // </ScrollView>
   );
 };

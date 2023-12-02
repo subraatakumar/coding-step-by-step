@@ -5,13 +5,9 @@ import { getLandingPage } from "../apis";
 import { ComingSoon, MarkdownReader } from "../components";
 
 const CourseLanding = () => {
+  const navigation = useNavigation();
   const params = useRoute().params;
   const [landingPageData, setLandingPageData] = useState({});
-
-  //   console.log("Course Landing Page Params:");
-  //   console.log(params);
-  //   console.log("Course landing page data:");
-  //   console.log(landingPageData);
 
   useEffect(() => {
     const getData = async (id) => {
@@ -25,7 +21,9 @@ const CourseLanding = () => {
       } catch (e) {}
     };
     getData(params?.id);
+    navigation.setOptions({ title: params?.title || "Course Landing Page" });
   }, []);
+
   return (
     <View style={{ flex: 1 }}>
       {Object.keys(landingPageData).length > 0 ? (

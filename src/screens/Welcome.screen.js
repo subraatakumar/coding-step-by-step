@@ -12,15 +12,15 @@ const Welcome = () => {
     navigation.replace("Home");
   }, [navigation]);
 
-  useEffect(() => {
-    const delayNavigation = setTimeout(() => {
-      if (Platform.OS == "web") {
-        navigateToHome();
-      }
-    }, 5000); // Adjust the delay time as needed
+  // useEffect(() => {
+  //   const delayNavigation = setTimeout(() => {
+  //     if (Platform.OS == "web") {
+  //       navigateToHome();
+  //     }
+  //   }, 5000); // Adjust the delay time as needed
 
-    return () => clearTimeout(delayNavigation); // Cleanup the timer on component unmount
-  }, [navigation]);
+  //   return () => clearTimeout(delayNavigation); // Cleanup the timer on component unmount
+  // }, [navigation]);
 
   return (
     <View style={styles.container}>
@@ -41,13 +41,13 @@ const Welcome = () => {
       <Text>Hi! 👋</Text>
       <Text>Welcome To CodingStepByStep</Text>
       <Text>Keep Learning Keep Growing</Text>
-      {Platform.OS != "web" && (
-        <MyButton
-          title="Start Learning"
-          onPress={navigateToHome}
-          style={{ marginTop: 20 }}
-        />
-      )}
+      {/* {Platform.OS != "web" && ( */}
+      <MyButton
+        title="Start Learning"
+        onPress={navigateToHome}
+        style={{ marginTop: 20 }}
+      />
+      {/* )} */}
     </View>
   );
 };

@@ -1,8 +1,8 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { getLandingPage } from "../apis";
-import { MarkdownReader } from "../components";
+import { ComingSoon, MarkdownReader } from "../components";
 
 const CourseLanding = () => {
   const params = useRoute().params;
@@ -15,12 +15,14 @@ const CourseLanding = () => {
 
   useEffect(() => {
     const getData = async (id) => {
-      const result = await getLandingPage(id);
-      if (result.isSuccess) {
-        setLandingPageData((prev) => {
-          return { ...result.data };
-        });
-      }
+      try {
+        const result = await getLandingPage(id);
+        if (result.isSuccess) {
+          setLandingPageData((prev) => {
+            return { ...result.data };
+          });
+        }
+      } catch (e) {}
     };
     getData(params?.id);
   }, []);
@@ -34,7 +36,7 @@ const CourseLanding = () => {
           file={landingPageData.file}
         />
       ) : (
-        <Text>Comming Soon...</Text>
+        <ComingSoon />
       )}
     </View>
   );

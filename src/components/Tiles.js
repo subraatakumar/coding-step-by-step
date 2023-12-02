@@ -1,4 +1,11 @@
-import { ScrollView, View, Text, Platform } from "react-native";
+import {
+  ScrollView,
+  View,
+  Text,
+  Platform,
+  Pressable,
+  FlatList,
+} from "react-native";
 import React, {
   createContext,
   useCallback,
@@ -6,7 +13,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import Image from "./Image";
 import { getCourses } from "../apis";
 import { getNumberOfColumns, getSingleTileWidth } from "../util";
@@ -63,7 +69,7 @@ const Tile = ({ data, style, singleTileWidth = 150 }) => {
   console.log(handlePress);
 
   return (
-    <TouchableOpacity
+    <Pressable
       onPress={() => handlePress(data.id)}
       style={{
         width: singleTileWidth,
@@ -75,19 +81,17 @@ const Tile = ({ data, style, singleTileWidth = 150 }) => {
         ...style,
       }}
     >
-      <View>
-        <Image uri={data.thumbnail} width="100%" />
-        <Text
-          style={{
-            textAlign: "center",
-            marginTop: 10,
-            elevation: 5,
-            fontWeight: "bold",
-          }}
-        >
-          {data.title}
-        </Text>
-      </View>
-    </TouchableOpacity>
+      <Image uri={data.thumbnail} width="100%" />
+      <Text
+        style={{
+          textAlign: "center",
+          marginTop: 10,
+          elevation: 5,
+          fontWeight: "bold",
+        }}
+      >
+        {data.title}
+      </Text>
+    </Pressable>
   );
 };

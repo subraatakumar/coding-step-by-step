@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/coding-step-by-step/static/js/main.a163bec3.js",
+    "main.js": "/coding-step-by-step/static/js/main.abcbf090.js",
     "static/js/490.29d05a13.chunk.js": "/coding-step-by-step/static/js/490.29d05a13.chunk.js",
     "static/js/272.b884e671.chunk.js": "/coding-step-by-step/static/js/272.b884e671.chunk.js",
     "static/js/860.41fad61a.chunk.js": "/coding-step-by-step/static/js/860.41fad61a.chunk.js",
@@ -19,13 +19,13 @@
     "favicon-16.png": "/coding-step-by-step/favicon-16.png",
     "manifest.json": "/coding-step-by-step/manifest.json",
     "serve.json": "/coding-step-by-step/serve.json",
-    "main.a163bec3.js.map": "/coding-step-by-step/static/js/main.a163bec3.js.map",
+    "main.abcbf090.js.map": "/coding-step-by-step/static/js/main.abcbf090.js.map",
     "94.bfa17b2c.chunk.js.map": "/coding-step-by-step/static/js/94.bfa17b2c.chunk.js.map",
     "686.83c81ad4.chunk.js.map": "/coding-step-by-step/static/js/686.83c81ad4.chunk.js.map",
     "257.313bf53a.js.map": "/coding-step-by-step/static/js/257.313bf53a.js.map"
   },
   "entrypoints": [
     "static/js/257.313bf53a.js",
-    "static/js/main.a163bec3.js"
+    "static/js/main.abcbf090.js"
   ]
 }

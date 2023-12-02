@@ -1,5 +1,6 @@
 import { Header, createStackNavigator } from "@react-navigation/stack";
 import { Welcome, Home } from "../screens";
+import app from "../util/constants";
 
 const Stack = createStackNavigator();
 
@@ -14,7 +15,7 @@ function MyStack() {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ title: "Coding Step By Step" }}
+        options={{ title: app.home_page_title }}
       />
     </Stack.Navigator>
   );

@@ -1,14 +1,29 @@
-import React from "react";
-import { View, Text, StyleSheet, Platform } from "react-native";
-import { Entypo } from "@expo/vector-icons";
+import React, { useCallback, useEffect } from "react";
+import { View, Text, StyleSheet, Platform, Button } from "react-native";
 import LottieView from "lottie-react-native";
 import { LottieView as LottieViewWeb } from "@bounceapp/lottie";
 import MyButton from "../components/MyButton";
+import { useNavigation } from "@react-navigation/native";
 
-const Welcome = ({ navigation }) => {
-  const navigateToHome = () => {
-    navigation.replace("Home");
-  };
+const Welcome = () => {
+  const navigation = useNavigation();
+
+  const navigateToHome = useCallback(() => {
+    Platform.OS === "web"
+      ? navigation.navigate("Home")
+      : navigation.replace("Home");
+  }, [navigation]);
+
+  useEffect(() => {
+    const delayNavigation = setTimeout(() => {
+      if (Platform.OS == "web") {
+        navigateToHome();
+      }
+    }, 5000); // Adjust the delay time as needed
+
+    return () => clearTimeout(delayNavigation); // Cleanup the timer on component unmount
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
       {Platform.OS === "web" ? (
@@ -28,8 +43,13 @@ const Welcome = ({ navigation }) => {
       <Text>Hi! 👋</Text>
       <Text>Welcome To CodingStepByStep</Text>
       <Text>Keep Learning Keep Growing</Text>
-      {/* <Entypo name="rocket" size={30} /> */}
-      <MyButton title="Start Learning" onPress={navigateToHome} />
+      {Platform.OS != "web" && (
+        <MyButton
+          title="Start Learning"
+          onPress={navigateToHome}
+          style={{ marginTop: 20 }}
+        />
+      )}
     </View>
   );
 };

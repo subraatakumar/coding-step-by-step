@@ -3,9 +3,12 @@ import { View, Text, Button } from "react-native";
 import Tiles from "../components/Tiles";
 
 const Home = ({ navigation }) => {
+  const handlePress = (id) => {
+    navigation.navigate("CourseLanding", { id });
+  };
   return (
     <View>
-      <Tiles />
+      <Tiles handlePress={handlePress} />
     </View>
   );
 };

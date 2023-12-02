@@ -9,7 +9,7 @@ const getCourses = () => {
       });
       res({ data: data, isSuccess: true });
     } else {
-      rej({ data: {}, isSuccess: false, message: "Unable to find courses" });
+      rej({ data: [], isSuccess: false, message: "Unable to find courses" });
     }
   });
 };

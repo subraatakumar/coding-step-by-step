@@ -1,5 +1,5 @@
 import { Header, createStackNavigator } from "@react-navigation/stack";
-import { Welcome, Home, CourseLanding } from "../screens";
+import { Welcome, Home, CourseLanding, CourseContent } from "../screens";
 import app from "../util/constants";
 
 const Stack = createStackNavigator();
@@ -21,6 +21,11 @@ function MyStack() {
         name="CourseLanding"
         component={CourseLanding}
         options={{ title: "Course Landing Page" }}
+      />
+      <Stack.Screen
+        name="CourseContent"
+        component={CourseContent}
+        options={{ title: "Course Content Page" }}
       />
     </Stack.Navigator>
   );

@@ -23,7 +23,6 @@ const TilesContext = createContext();
 const Tiles = ({ handlePress }) => {
   const [data, setData] = useState([]);
   const [isLandscape, setIsLandscape] = useState(false);
-  const [key, setKey] = useState("key-1"); // Initialize with a default key
   const noOfColumns = getNumberOfColumns(isLandscape);
   const singleTileWidth = getSingleTileWidth(isLandscape);
 
@@ -41,7 +40,6 @@ const Tiles = ({ handlePress }) => {
   useEffect(() => {
     DeviceInfo.isLandscape().then((isLandscape) => {
       setIsLandscape(isLandscape);
-      setKey(`key-${noOfColumns}`);
     });
   });
 
@@ -69,7 +67,7 @@ const Tile = ({ data, style, singleTileWidth = 150 }) => {
 
   return (
     <Pressable
-      onPress={() => handlePress(data.id, data.title)}
+      onPress={() => handlePress(data.id, data.title, data?.nextPage)}
       style={{
         width: singleTileWidth,
         borderColor: "grey",

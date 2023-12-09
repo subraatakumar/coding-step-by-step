@@ -42,9 +42,8 @@ const Tiles = ({ handlePress }) => {
     // else it will lead to infinite re-rendering
     DeviceInfo.isLandscape().then((isLandscape) => {
       setIsLandscape(isLandscape);
-      setKey(`key-${noOfColumns}`);
     });
-  }, [])
+  }, []);
 
   return (
     <TilesContext.Provider value={handlePress}>

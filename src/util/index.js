@@ -1,4 +1,4 @@
 import getNumberOfColumns from "./getNumberOfColumns";
 import getSingleTileWidth from "./getSingleTileWidth";
-
-export { getNumberOfColumns, getSingleTileWidth };
+import redirectToContent from "./redirectToContent";
+export { getNumberOfColumns, getSingleTileWidth, redirectToContent };

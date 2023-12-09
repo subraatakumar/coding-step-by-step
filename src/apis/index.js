@@ -1,3 +1,4 @@
 import getCourses from "./getCourses";
-
-export { getCourses };
+import getLandingPage from "./getLandingPage";
+import getLandingPages from "./getLandingPages";
+export { getCourses, getLandingPage, getLandingPages };

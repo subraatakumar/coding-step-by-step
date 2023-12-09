@@ -38,10 +38,13 @@ const Tiles = ({ handlePress }) => {
   }, []);
 
   useEffect(() => {
+    // don't keep this outside, this should be called once or in event listener in update eventually
+    // else it will lead to infinite re-rendering
     DeviceInfo.isLandscape().then((isLandscape) => {
       setIsLandscape(isLandscape);
+      setKey(`key-${noOfColumns}`);
     });
-  });
+  }, [])
 
   return (
     <TilesContext.Provider value={handlePress}>

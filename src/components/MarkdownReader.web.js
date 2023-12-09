@@ -11,8 +11,17 @@ import {
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import EditGithubPage from "./EditGithubPage";
+import Author from "./Author";
 
-const MarkdownReader = ({ username, repo, branch, file }) => {
+const MarkdownReader = ({
+  username,
+  repo,
+  branch,
+  file,
+  authorName = "",
+  authorImage = "",
+  authorUrl = "",
+}) => {
   const [readme, setReadme] = useState(``);
   const url = `https://github.com/${username}/${repo}/blob/${branch}/${file}`;
 
@@ -34,7 +43,16 @@ const MarkdownReader = ({ username, repo, branch, file }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <ReactMarkdown>{readme}</ReactMarkdown>
-      <EditGithubPage url={url} />
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <EditGithubPage url={url} />
+        {authorName.length > 0 && (
+          <Author
+            authorImage={authorImage}
+            authorName={authorName}
+            authorUrl={authorUrl}
+          />
+        )}
+      </View>
     </ScrollView>
   );
 };

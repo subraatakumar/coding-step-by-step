@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
-import { Linking } from "react-native";
-import MyButton from "./MyButton";
+import { View, Linking } from "react-native";
+import { Foundation } from "@expo/vector-icons";
 
 const EditGithubPage = ({ url }) => {
   const handleClick = useCallback(() => {
@@ -10,10 +10,16 @@ const EditGithubPage = ({ url }) => {
   }, []);
 
   return (
-    // <Pressable onPress={handleClick}>
-    //   <Text>Edit This Page</Text>
-    // </Pressable>
-    <MyButton onPress={handleClick} title={"Edit this page"} />
+    <View>
+      <Foundation.Button
+        name="page-edit"
+        onPress={handleClick}
+        backgroundColor={"#b5b5b5"}
+        color={"#000"}
+      >
+        Edit This Page
+      </Foundation.Button>
+    </View>
   );
 };
 

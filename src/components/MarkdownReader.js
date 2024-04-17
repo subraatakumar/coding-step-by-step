@@ -17,7 +17,7 @@ const MarkdownReader = ({
   const [readme, setReadme] = useState(``);
   const [scrollY, setScrollY] = useState(0);
 
-  console.log(scrollY);
+  console.log(scrollY, authorName);
 
   useEffect(() => {
     const fetchReadme = async () => {
@@ -45,7 +45,7 @@ const MarkdownReader = ({
   );
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginHorizontal: 10 }}>
       <ReactMarkdown
         value={readme}
         flatListProps={{
@@ -53,6 +53,7 @@ const MarkdownReader = ({
           onScroll: handleScrolling,
         }}
       />
+
       {authorName.length > 0 && scrollY < 50 && (
         <View
           style={{

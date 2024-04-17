@@ -1,4 +1,21 @@
 const courseContents = {
+  js_dsa: {
+    l001: {
+      id: "l001",
+      title: "What is dynamic programming?",
+      username: "subrataindia",
+      repo: "tutorials",
+      branch: "main",
+      file: "js-interview/l001.md",
+      type: "github",
+      question: "",
+      tags: "React, JavaScript, React Native, Intermediate JavaScript Interview Questions",
+      authorUrl: "",
+      authorName: "Subrata",
+      authorImage:
+        "https://media.licdn.com/dms/image/C5103AQGIYCaDpEY0VQ/profile-displayphoto-shrink_800_800/0/1580724209151?e=1707350400&v=beta&t=iE6Ktk3R7FyWaUI-hXbnoFKrEHPkW8ECC1AY4lqW-80",
+    },
+  },
   js_interview: {
     l001: {
       id: "l001",
